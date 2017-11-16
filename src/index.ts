@@ -19,8 +19,8 @@ function start() {
     const b = new Board(6, 4);
     const bui = new BoardUi(b.pitCount);
     let whoseMove: WhoseMove;
-    // whoseMove = true;
-    whoseMove = Math.random() < 0.5;
+    whoseMove = true;
+    // whoseMove = Math.random() < 0.5;
 
     function move(player: boolean, pitIndex: number) {
         if (player !== whoseMove || b.seedsInPit(player, pitIndex) < 1) {
