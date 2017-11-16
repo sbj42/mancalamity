@@ -1,0 +1,28 @@
+.main {
+    margin: 60px auto 0px;
+    transform: perspective(600px) rotateX(30deg);
+}
+
+.board {
+    fill: rgb(170, 109, 17);
+}
+
+.store {
+    fill: rgb(236, 231, 217);
+}
+
+.pit {
+    fill: rgb(236, 231, 217);
+}
+.pit.playable {
+    fill: rgb(225, 245, 252);
+}
+.pit.playable:hover {
+    fill: rgb(253, 255, 153);
+}
+
+.seed {
+    fill: rgb(121, 96, 62);
+    stroke: black;
+    pointer-events: none;
+}

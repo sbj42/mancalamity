@@ -1,0 +1,21 @@
+.title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.controls {
+    float: left;
+}
+
+.control {
+    padding: 2px;
+}
+
+.status {
+    float: right;
+}
+
+.results {
+    margin-top: 15px;
+    text-align: center;
+}
