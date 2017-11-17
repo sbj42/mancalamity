@@ -9,7 +9,7 @@
   "author": "James Clark <jameswclark@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack -p",
     "start": "webpack-dev-server --open"
   },
   "devDependencies": {

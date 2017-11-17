@@ -9,7 +9,7 @@ import MinimaxAi, {InverseMinimaxAi} from './ai/minimax';
 import './index.css';
 
 let southAi = 'user';
-let northAi = 'user';
+let northAi = 'random';
 let southWins = 0;
 let northWins = 0;
 let ties = 0;
