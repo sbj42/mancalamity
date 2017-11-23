@@ -54,7 +54,8 @@ function start() {
             d3.select('.status')
                 .text(`game over: ${winner} wins`);
             d3.select('.results')
-                .text(`north: ${northWins}, south: ${southWins}, tie: ${ties}`);
+                .text(`north: ${northWins}, south: ${southWins}, tie: ${ties}`
+                + ` S/(N+S)=${(southWins / (northWins + southWins) * 100).toFixed(1)}`);
             if (fastMode) {
                 setTimeout(start, 0);
             }
