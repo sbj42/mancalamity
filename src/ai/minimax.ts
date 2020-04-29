@@ -53,7 +53,7 @@ function scoreMove(board: Board, player: boolean, pitIndex: number,
     return score;
 }
 
-function MinimaxAiBase(player: boolean, board: Board, invert: boolean, depth: number = 6) {
+function MinimaxAiBase(player: boolean, board: Board, invert: boolean, depth = 6) {
     let bestScore = null;
     let moves: number[] = [];
     let alpha = -48;
@@ -78,10 +78,10 @@ function MinimaxAiBase(player: boolean, board: Board, invert: boolean, depth: nu
     return moves[Math.floor(Math.random() * moves.length)];
 }
 
-export default function MinimaxAi(player: boolean, board: Board, depth: number = 8) {
+export default function MinimaxAi(player: boolean, board: Board, depth = 8) {
     return MinimaxAiBase(player, board, false, depth);
 }
 
-export function InverseMinimaxAi(player: boolean, board: Board, depth: number = 8) {
+export function InverseMinimaxAi(player: boolean, board: Board, depth = 8) {
     return MinimaxAiBase(player, board, true, depth);
 }

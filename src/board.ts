@@ -60,7 +60,7 @@ export default class Board {
         this._locations[loc] = 0;
         let side = player;
         let at = pitIndex;
-        while (true) {
+        for (;;) {
             // moving around the board
             at ++;
             loc ++;

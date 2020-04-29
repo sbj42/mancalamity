@@ -35,13 +35,12 @@ export type WhoseMove = boolean | 'none';
 type OnClickPitFunc = (player: boolean, pitIndex: number) => void;
 
 export default class BoardUi {
-    private _svg: d3.Selection<d3.BaseType, {}, HTMLElement, any>;
+    private _svg: d3.Selection<SVGSVGElement, unknown, HTMLElement, any>;
     private _width: number;
     private _height: number;
     private _unitWidth: number;
     private _unitHeight: number;
     private _pitCount: number;
-    private _whoseMove: WhoseMove;
     private _onClickPitFunc?: OnClickPitFunc;
 
     constructor(pitCount: number) {
@@ -70,7 +69,6 @@ export default class BoardUi {
     }
 
     setWhoseMove(whoseMove: WhoseMove) {
-        this._whoseMove = whoseMove;
         for (let pitIndex = 0; pitIndex < this._pitCount; pitIndex ++) {
             d3.select('#pit_0_' + pitIndex)
                 .classed('playable', whoseMove === false);
@@ -90,7 +88,7 @@ export default class BoardUi {
     }
 
     render(board: Board) {
-        // tslint:disable-next-line:no-this-assignment
+        // eslint-disable-next-line @typescript-eslint/no-this-alias
         const ui = this;
         const unitWidth = this._unitWidth;
         const unitHeight = this._unitHeight;

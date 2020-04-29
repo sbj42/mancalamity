@@ -96,7 +96,7 @@ function start() {
     ready();
 }
 
-function addAis(selection: d3.Selection<d3.BaseType, {}, HTMLElement, any>, prefix: string) {
+function addAis(selection: d3.Selection<HTMLSelectElement, unknown, HTMLElement, any>, prefix: string) {
     selection.append('option')
         .attr('value', 'user')
         .text(`${prefix}: User`);
