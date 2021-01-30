@@ -4,10 +4,4 @@ This is an implementation of the game Mancala, supporting two-player play as wel
 
 ## Play online
 
-You can play this online at https://sbj42.github.io/projects/mancalamity/.
-
-## Run it yourself
-
-```
-npm start
-```
+You can play this online at https://sbj42.github.io//mancalamity/game/.
