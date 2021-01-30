@@ -1,22 +1,9 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.ts',
-  devtool: 'inline-source-map',
-  devServer: {
-      contentBase: './dist',
-      hot: true,
-  },
-  plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-      title: 'Mancalamity'
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+  mode: 'production',
   module: {
     rules: [
         {
@@ -36,6 +23,6 @@ module.exports = {
   },
   output: {
     filename: 'mancalamity.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'game', 'build'),
   },
 };
